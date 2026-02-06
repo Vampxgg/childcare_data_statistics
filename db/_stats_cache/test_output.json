@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "region": {
+      "institution_count": 2927,
+      "school_count": 189,
+      "posting_sample_count": 0,
+      "matched_institution_count": 0
+    },
+    "national": {
+      "institution_count": 62668,
+      "school_count": 3224,
+      "posting_sample_count": 0,
+      "matched_institution_count": 0
+    }
+  },
+  "details": {
+    "institutions": [
+      {
+        "institution_name": "佛山市高明区更合镇童星幼儿园",
+        "institution_other_name": "佛山市高明区更合镇童星幼儿园",
+        "zoning_name": "广东省佛山市高明区更合镇",
+        "institution_type": "非营利性",
+        "address": "升鹤路31号"
+      },
+      {
+        "institution_name": "广州市白云区太和镇营溪村幼儿园",
+        "institution_other_name": "广州市白云区太和镇营溪村幼儿园",
+        "zoning_name": "广东省广州市白云区太和镇",
+        "institution_type": "非营利性",
+        "address": "广州市白云区太和镇营溪村府大街5号之一"
+      },
+      {
+        "institution_name": "东莞市茁悦托育服务有限公司",
+        "institution_other_name": "东莞市茁悦托育服务有限公司",
+        "zoning_name": "广东省东莞市市直辖乡长安镇",
+        "institution_type": "营利性",
+        "address": "广东省东莞市长安镇霄边大街36号鼎峰商业广场街区楼号2046"
+      }
+    ],
+    "schools": [
+      {
+        "机构名称": "广东交通职业技术学院",
+        "省份": "广东省",
+        "开设专业": "婴幼儿托育服务与管理 (520802)",
+        "修业年限": "3",
+        "年份": "2021"
+      },
+      {
+        "机构名称": "潮汕职业技术学院",
+        "省份": "广东省",
+        "开设专业": "婴幼儿托育服务与管理 (520802)",
+        "修业年限": "3",
+        "年份": "2021"
+      },
+      {
+        "机构名称": "广东南华工商职业学院",
+        "省份": "广东省",
+        "开设专业": "婴幼儿托育服务与管理 (520802)",
+        "修业年限": "3",
+        "年份": "2021"
+      }
+    ],
+    "questionnaire_posting": {},
+    "questionnaire_details_sample": [],
+    "cross_validation": {
+      "region_matched_count": 0,
+      "national_matched_count": 0
+    }
+  },
+  "meta": {
+    "from_cache": false,
+    "fingerprints": {
+      "institution": "ec785e0ed1cae7c541bfe321b2df3cd570418cdc595e15c98bf89cbcab09f00a",
+      "questionnaire": "73443352ea81f6774b3eed4db65ac57c2dbe1c019a79a565c571b6c6370fe5a4",
+      "school": "18def0e22bb531fa55ccab89bf0135f260d31a0487710afc3acb302527f044f5"
+    }
+  }
+}
