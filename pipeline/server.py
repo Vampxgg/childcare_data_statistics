@@ -4,7 +4,7 @@
 供外部系统调用 pipeline.main 与 questionnaire_main 功能
 
 启动: python -m pipeline.server
-     uvicorn pipeline.server:app --host 0.0.0.0 --port 8000
+     uvicorn pipeline.server:app --host 0.0.0.0 --port 7806
 """
 
 from typing import Any, Dict, Optional
@@ -134,7 +134,7 @@ def api_post_job_demand(req: JobDemandRequest) -> Dict[str, Any]:
     )
 
 
-def run_server(host: str = "0.0.0.0", port: int = 8000) -> None:
+def run_server(host: str = "0.0.0.0", port: int = 7806) -> None:
     """启动服务"""
     import uvicorn
     uvicorn.run(app, host=host, port=port)
@@ -144,6 +144,6 @@ if __name__ == "__main__":
     import argparse
     p = argparse.ArgumentParser()
     p.add_argument("--host", default="0.0.0.0", help="监听地址")
-    p.add_argument("--port", type=int, default=8000, help="监听端口")
+    p.add_argument("--port", type=int, default=7806, help="监听端口")
     args = p.parse_args()
     run_server(host=args.host, port=args.port)

@@ -103,10 +103,10 @@ python -m pipeline.questionnaire_main --region 安徽省 --details-limit=5
 ```bash
 python -m pipeline.server
 # 或指定端口
-python -m pipeline.server --host 0.0.0.0 --port 8000
+python -m pipeline.server --host 0.0.0.0 --port 7806
 
 # 或使用 uvicorn
-uvicorn pipeline.server:app --host 0.0.0.0 --port 8000
+uvicorn pipeline.server:app --host 0.0.0.0 --port 7806
 ```
 
 ### 接口列表
@@ -122,15 +122,15 @@ uvicorn pipeline.server:app --host 0.0.0.0 --port 8000
 
 ```bash
 # 综合统计
-curl "http://localhost:8000/stats?region=%E5%B9%BF%E4%B8%9C%E7%9C%81&major=520802"
+curl "http://localhost:7806/stats?region=%E5%B9%BF%E4%B8%9C%E7%9C%81&major=520802"
 
 # 人才需求提取（默认过滤无意义岗位）
-curl "http://localhost:8000/job_demand?region=%E5%B9%BF%E4%B8%9C%E7%9C%81"
+curl "http://localhost:7806/job_demand?region=%E5%B9%BF%E4%B8%9C%E7%9C%81"
 # 不过滤：filter_meaningless_postings=false
-curl "http://localhost:8000/job_demand?region=%E5%B9%BF%E4%B8%9C%E7%9C%81&filter_meaningless_postings=false"
+curl "http://localhost:7806/job_demand?region=%E5%B9%BF%E4%B8%9C%E7%9C%81&filter_meaningless_postings=false"
 
 # POST
-curl -X POST http://localhost:8000/stats \
+curl -X POST http://localhost:7806/stats \
   -H "Content-Type: application/json" \
   -d '{"region":"广东省","major":"520802","no_questionnaire_details":true}'
 ```
