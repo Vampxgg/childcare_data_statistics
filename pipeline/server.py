@@ -3,11 +3,20 @@
 托育数据统计管道 HTTP API 服务
 供外部系统调用 pipeline.main 与 questionnaire_main 功能
 
-启动: python -m pipeline.server
-     uvicorn pipeline.server:app --host 0.0.0.0 --port 7806
+启动（请在项目根目录 childcare_data_statistics 下执行）:
+  python -m pipeline.server
+  python pipeline/server.py
+  uvicorn pipeline.server:app --host 0.0.0.0 --port 7806
 """
 
+import sys
+from pathlib import Path
 from typing import Any, Dict, Optional
+
+# 直接执行本文件时 sys.path 只有 pipeline/，相对导入会失败；把项目根加入路径
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 
 try:
     from fastapi import FastAPI, Query
@@ -16,8 +25,8 @@ try:
 except ImportError:
     raise ImportError("请安装: pip install fastapi uvicorn")
 
-from .api import get_stats
-from .questionnaire_extract import get_talent_demand
+from pipeline.api import get_stats
+from pipeline.questionnaire_extract import get_talent_demand
 
 app = FastAPI(
     title="托育数据统计管道 API",
